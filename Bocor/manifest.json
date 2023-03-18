@@ -7,7 +7,7 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "mapasalternative.netlify",
-  "start_url": "/https://mapasalternative.netlify.app/",
+  "start_url": "/index.html",
   "theme_color": "#ffffff",
   "categories": [
     "education",
