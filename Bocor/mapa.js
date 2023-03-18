@@ -1,5 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoid2lsbC1hbG1laWRhMTI0LTEiLCJhIjoiY2xmOW54MHY4MG81MzNycGVvZzl2NjUzdSJ9.g9qUDKgxwJlvr8P1umBbEQ';
 
+
 function MapsAlternative() {
 
     var map = new mapboxgl.Map({
@@ -32,15 +33,22 @@ function MapsAlternative() {
     var directions = new MapboxDirections({
         accessToken: mapboxgl.accessToken,
         unit: 'metric',
-        profile: 'mapbox/driving-traffic', // Perfil de viagem para direções (por exemplo, a pé, de carro, de bicicleta)
+        language: 'pt',
+        profile: 'mapbox/walking',
         controls: {
             instructions: true
-        }
+        },
+        styles: [
+            { "id": "directions-route-line", "type": "line", "paint": { "line-width": 3, "line-color": "#0074E4" } },
+            { "id": "directions-route-line-alt", "type": "line", "paint": { "line-width": 3, "line-color": "#C4C4C4" } },
+            { "id": "directions-hover-point-circle", "type": "circle", "paint": { "circle-radius": 12, "circle-color": "#0074E4" } },
+            { "id": "directions-waypoint-circle", "type": "circle", "paint": { "circle-radius": 10, "circle-color": "#FFF" } }
+        ]
     });
 
     map.addControl(directions, 'top-left');
-    var origin = document.getElementById('origin').value;
     var destination = document.getElementById('destination').value;
+    var origin = document.getElementById('origin').value;
 
 
     directions.setOrigin(origin);
