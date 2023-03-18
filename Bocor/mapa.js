@@ -29,4 +29,21 @@ function MapsAlternative() {
                 .addTo(map);
         });
     }
+    var directions = new MapboxDirections({
+        accessToken: mapboxgl.accessToken,
+        unit: 'metric',
+        profile: 'mapbox/driving-traffic', // Perfil de viagem para direções (por exemplo, a pé, de carro, de bicicleta)
+        controls: {
+            instructions: true
+        }
+    });
+
+    map.addControl(directions, 'top-left');
+    var origin = document.getElementById('origin').value;
+    var destination = document.getElementById('destination').value;
+
+
+    directions.setOrigin(origin);
+    directions.setDestination(destination);
+    directions.query();
 }
