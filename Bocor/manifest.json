@@ -1,5 +1,5 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#213b52",
   "description": "Mapa alternativo",
   "dir": "ltr",
   "display": "standalone",
@@ -8,7 +8,7 @@
   "scope": "/",
   "short_name": "mapasalternative.netlify",
   "start_url": "/index.html",
-  "theme_color": "#ffffff",
+  "theme_color": "#213b52",
   "categories": [
     "education",
     "navigation",
