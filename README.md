@@ -1,6 +1,3 @@
-# atvdd
-Atividade de mobile, PWA
+# Atividade de mobile, PWA
 
-
-dia 07/03/2023
-Refiz o projeto apaguei todo o script e refiz da minha maneira
+Neste documento esta o projeto do PWA realizado na cadeira de Mobile da faculdade Senac Pernambuco, no qual é um mapa criado utilizando a API MapBox, com JS, um pouco de HTML e CSS.

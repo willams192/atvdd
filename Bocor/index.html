@@ -8,12 +8,17 @@
   <meta content="Mapa alternativo" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
+ <!-- background -->
+ <meta name="theme-color" content="#317EFB"/>
+  
+ <!-- Favicons -->
   <link href="assets/img/logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   
   <!-- Manisfesto em jason -->
-  <link rel="manisfest" href="manifest.json">
+  <link rel="manifest" href="manifest.json">
+  <!-- Link errado -->
+ <link rel="apple-touch-icon" href="assets/img/icons/192.png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -87,6 +92,13 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('pwabuilder-sw.js')
+    }
+  </script>
+
 
 </body>
 
